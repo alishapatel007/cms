@@ -29,6 +29,8 @@ public class Main {
                     instructorClient.instructorMainMenu();
                     break;
                 case 2:
+                    System.out.println("----------------------------------------------------");
+                    System.out.println("Student");
                     break;
                 case 99:
                     System.out.println("Exiting the Application");

@@ -25,9 +25,9 @@ public class InstructorClient {
             switch (choice){
                 case 1:
                     System.out.println("----------------------------------------------------");
-                    System.out.println("Enter you username");
+                    System.out.println("Enter your username");
                     String username = sc.next();
-                    System.out.println("Enter you password");
+                    System.out.println("Enter your password");
                     String password = sc.next();
                     Boolean result = controller.isValidUser(username,password);
                     if(result){
@@ -40,6 +40,20 @@ public class InstructorClient {
                     }
                     break;
                 case 2:
+                    System.out.println("----------------------------------------------------");
+                    System.out.println("Start with registration process");
+                    System.out.println("Enter your username");
+                    String newUsername = sc.next();
+                    System.out.println("Enter your password");
+                    String newPassword = sc.next();
+                    Boolean isRegistrationSuccess = controller.registerUser(newUsername,newPassword);
+                    if(isRegistrationSuccess){
+                        System.out.println("----------------------------------------------------");
+                        System.out.println("Your registration was successful. Please login");
+                    }else{
+                        System.out.println("----------------------------------------------------");
+                        System.out.println("Registration was unsuccessful. Username exists. Try again!!");
+                    }
                     break;
                 case 3:
                     System.out.println("Exiting Instructor flow");
@@ -54,6 +68,39 @@ public class InstructorClient {
     }
 
     public void instructorSubMenu(String username){
-        System.out.println("Hi "+ username);
+        Integer mainMenu = 0;
+
+        while(mainMenu != 4){
+            System.out.println("Hi "+ username);
+            System.out.println("----------------------------------------------------");
+            System.out.println("1.View courses");
+            System.out.println("2.View Students Enrolled");
+            System.out.println("3.Add course");
+            System.out.println("4.Go back to previous menu");
+            choice = sc.nextInt();
+            switch (choice){
+                case 1:
+                    System.out.println("----------------------------------------------------");
+                    System.out.println("1.View courses");
+                    break;
+                case 2:
+                    System.out.println("----------------------------------------------------");
+                    System.out.println("2.View Students Enrolled");
+                    break;
+                case 3:
+                    System.out.println("----------------------------------------------------");
+                    System.out.println("3.Add course");
+                    break;
+                case 4:
+                    mainMenu = 4;
+                    System.out.println("Going back");
+                    break;
+                default:
+                    System.out.println("Wrong Input! Please Try Again");
+                    System.out.println("----------------------------------------------------");
+
+            }
+        }
+
     }
 }

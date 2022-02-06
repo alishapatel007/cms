@@ -1,0 +1,37 @@
+1. Start with the Instructor flow
+2. Follow the package structure client, controller, service, repository
+
+Instructor flow
+Show the menu
+1.login
+2.register
+3.back to main menu
+
+Option 1 :Login flow
+Ask for the username and password (hard code for now).
+Check for valid credentials
+if credentials are valid the display Success
+if not then display Invalid credentials!! Try again or register
+Write the logic in the controller to check the credentials of the user.
+show the menu for instructor again.
+
+Option 2: register flow
+Ask for username and password.
+Check if username exists then show Registration was unsuccessful. Username exists. Try again!!
+If user doesnt exists Your registration was successful. Please login.
+Write the logic in the controller to check the existence of the user.
+show the menu for instructor again.
+
+Option 3:
+Back to main menu
+
+Login Successful :
+Welcome the Instructor.
+You are successfully logged in.
+Hi <Instructor Name>
+Show the sub menu for the instructor.
+1.View courses
+2.View Students Enrolled
+3.Add course
+4.Go back to previous menu
+
